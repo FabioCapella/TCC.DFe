@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDAD3380-ABBE-4CEE-8673-817F78426137}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Procergs.Recepcao.Webservices</RootNamespace>
+    <AssemblyName>Procergs.Recepcao.Webservices</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>Off</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PRSEFCertifDigital, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PRSEFCertifDigital\PRSEFCertifDigital.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox, Version=5.2.0.124, Culture=neutral, PublicKeyToken=5a62fa96d0ac431a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PRSEFCertifDigital\SecureBlackbox.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.PKI, Version=5.2.0.124, Culture=neutral, PublicKeyToken=5a62fa96d0ac431a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PRSEFCertifDigital\SecureBlackbox.PKI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Util\NFComProtocoloInfFisco.vb" />
+    <Compile Include="Util\NF3eProtocoloInfFisco.vb" />
+    <Compile Include="Util\ProtBPe.vb" />
+    <Compile Include="Util\ProtNFCom.vb" />
+    <Compile Include="Util\ProtCTe.vb" />
+    <Compile Include="Util\ProtMDFe.vb" />
+    <Compile Include="Util\ProtNF3e.vb" />
+    <Compile Include="WebServcices\BPe\ProcessaWSBPeDFe.vb" />
+    <Compile Include="WebServcices\BPe\ProcessaWSBPe.vb" />
+    <Compile Include="WebServcices\BPe\ProcessaWSBPeConsulta.vb" />
+    <Compile Include="WebServcices\BPe\ProcessaWSBPeEvento.vb" />
+    <Compile Include="WebServcices\BPe\ProcessaWSBPeStatusServico.vb" />
+    <Compile Include="WebServcices\BPe\ProcessaWSBPeTM.vb" />
+    <Compile Include="WebServcices\CTe\ProcessaWSCTe.vb" />
+    <Compile Include="WebServcices\NFCom\ProcessaWSNFCom.vb" />
+    <Compile Include="WebServcices\NFCom\ProcessaWSNFComEvento.vb" />
+    <Compile Include="WebServcices\NFCom\ProcessaWSNFComConsulta.vb" />
+    <Compile Include="WebServcices\CTe\ProcessaWSCTeConsulta.vb" />
+    <Compile Include="WebServcices\NFCom\ProcessaWSNFComStatusServico.vb" />
+    <Compile Include="WebServcices\NFCom\ProcessaWSNFComDFe.vb" />
+    <Compile Include="WebServcices\CTe\ProcessaWSCTeDFe.vb" />
+    <Compile Include="WebServcices\CTe\ProcessaWSCTeEvento.vb" />
+    <Compile Include="WebServcices\CTe\ProcessaWSCTeGTVe.vb" />
+    <Compile Include="WebServcices\CTe\ProcessaWSCTeOS.vb" />
+    <Compile Include="WebServcices\CTe\ProcessaWSCTeStatusServico.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Procergs.DFe.Dto\Procergs.DFe.Dto.vbproj">
+      <Project>{63e7f653-5923-49c9-a165-acfb6fc203a4}</Project>
+      <Name>Procergs.DFe.Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Procergs.DFe.Infraestutura\Procergs.DFe.Infraestutura.vbproj">
+      <Project>{ed083c89-52e6-4d0c-bc81-16c0831378d8}</Project>
+      <Name>Procergs.DFe.Infraestutura</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Procergs.DFe.Negocio\Procergs.DFe.Negocio.vbproj">
+      <Project>{1c4ee5fa-294f-44c6-b4b7-1a857b2b6d6a}</Project>
+      <Name>Procergs.DFe.Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Procergs.DFe.Validador\Procergs.DFe.Validador.vbproj">
+      <Project>{39d0b175-d86d-4669-acad-9fc6b064ba84}</Project>
+      <Name>Procergs.DFe.Validador</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRCTE\HMLE\WSV4\CteConsultaV4\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRCTE\HMLE\WSV4\CteRecepcaoEventoV4\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRCTE\HMLE\WSV4\CteStatusServicoV4\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRCTE\HMLE\WSV4\CteRecepcaoOSV4\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRCTE\HMLE\WSV4\CteRecepcaoSincV4\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRCTE\HMLE\WSV4\CTeRecepcaoGTVeV4\bin"
+
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRCTE\PROD\WSV4\CteConsultaV4\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRCTE\PROD\WSV4\CteRecepcaoEventoV4\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRCTE\PROD\WSV4\CteStatusServicoV4\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRCTE\PROD\WSV4\CteRecepcaoOSV4\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRCTE\PROD\WSV4\CteRecepcaoSincV4\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRCTE\PROD\WSV4\CTeRecepcaoGTVeV4\bin"
+
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRBPE\HMLE\WS\BPeRecepcao\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRBPE\HMLE\WS\BPeRecepcaoEvento\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRBPE\HMLE\WS\BPeConsulta\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRBPE\HMLE\WS\BPeStatusServico\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRBPE\HMLE\WS\BPeRecepcaoTM\bin"
+
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRBPE\PROD\WS\BPeRecepcao\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRBPE\PROD\WS\BPeRecepcaoEvento\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRBPE\PROD\WS\BPeConsulta\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRBPE\PROD\WS\BPeStatusServico\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRBPE\PROD\WS\BPeRecepcaoTM\bin"
+
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRNFCOM\HMLE\WS\NFComRecepcao\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRNFCOM\HMLE\WS\NFComRecepcaoEvento\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRNFCOM\HMLE\WS\NFComConsulta\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRNFCOM\HMLE\WS\NFComStatusServico\bin"
+																	
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRNFCOM\PROD\WS\NFComRecepcao\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRNFCOM\PROD\WS\NFComRecepcaoEvento\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRNFCOM\PROD\WS\NFComConsulta\bin"
+xcopy /y "$(TargetDir)*.dll" "\\profs02\proinSTALA\PRES\DSTR\DFT\AR1\PRNFCOM\PROD\WS\NFComStatusServico\bin"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

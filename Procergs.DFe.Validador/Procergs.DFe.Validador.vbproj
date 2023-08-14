@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39D0B175-D86D-4669-ACAD-9FC6B064BA84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Procergs.DFe.Validador</RootNamespace>
+    <AssemblyName>Procergs.DFe.Validador</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>Off</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PRSEFCertifDigital">
+      <HintPath>..\PRSEFCertifDigital\PRSEFCertifDigital.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox, Version=5.2.0.124, Culture=neutral, PublicKeyToken=5a62fa96d0ac431a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PRSEFCertifDigital\SecureBlackbox.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.PKI, Version=5.2.0.124, Culture=neutral, PublicKeyToken=5a62fa96d0ac431a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PRSEFCertifDigital\SecureBlackbox.PKI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Procergs.DFe.Dto" />
+    <Import Include="Procergs.DFe.Infraestutura" />
+    <Import Include="Procergs.DFe.Negocio" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Model\RetornoValidacaoDFe.vb" />
+    <Compile Include="Model\SEFConfiguration.vb" />
+    <Compile Include="Service\ValidarDocumentoFiscal.vb" />
+    <Compile Include="Model\SituacaoCache.vb" />
+    <Compile Include="Validation\ValidadorBPe.vb" />
+    <Compile Include="Validation\ValidadorCCe.vb" />
+    <Compile Include="Validation\ValidadorConfig.vb" />
+    <Compile Include="Validation\ValidadorCTe.vb" />
+    <Compile Include="Validation\ValidadorDFe.vb" />
+    <Compile Include="Validation\ValidadorDFeException.vb" />
+    <Compile Include="Validation\ValidadorEventoBPe.vb" />
+    <Compile Include="Validation\ValidadorEventoCTe.vb" />
+    <Compile Include="Validation\ValidadorEventoMDFe.vb" />
+    <Compile Include="Validation\ValidadorEventoNFCom.vb" />
+    <Compile Include="Validation\ValidadorEventoNF3e.vb" />
+    <Compile Include="Validation\ValidadorMDF.vb" />
+    <Compile Include="Validation\ValidadorNFCom.vb" />
+    <Compile Include="Validation\ValidadorNF3e.vb" />
+    <Compile Include="Validation\ValidadorPercurso.vb" />
+    <Compile Include="Validation\ValidadorSchemasXSD.vb" />
+    <Compile Include="Validation\ValidadorXMLSchema.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Procergs.DFe.Dto\Procergs.DFe.Dto.vbproj">
+      <Project>{63e7f653-5923-49c9-a165-acfb6fc203a4}</Project>
+      <Name>Procergs.DFe.Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Procergs.DFe.Infraestutura\Procergs.DFe.Infraestutura.vbproj">
+      <Project>{ed083c89-52e6-4d0c-bc81-16c0831378d8}</Project>
+      <Name>Procergs.DFe.Infraestutura</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Procergs.DFe.Negocio\Procergs.DFe.Negocio.vbproj">
+      <Project>{1c4ee5fa-294f-44c6-b4b7-1a857b2b6d6a}</Project>
+      <Name>Procergs.DFe.Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

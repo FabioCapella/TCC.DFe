@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C4EE5FA-294F-44C6-B4B7-1A857B2B6D6A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Procergs.DFe.Negocio</RootNamespace>
+    <AssemblyName>Procergs.DFe.Negocio</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>Off</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Procergs.DFe.Dto" />
+    <Import Include="Procergs.DFe.Infraestutura" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\ANTTDAO.vb" />
+    <Compile Include="DAO\BPeCaixaDAO.vb" />
+    <Compile Include="DAO\BPeDAO.vb" />
+    <Compile Include="DAO\BPeEventoDAO.vb" />
+    <Compile Include="DAO\BPERecepcaoDAO.vb" />
+    <Compile Include="DAO\ConsultaChaveAcessoDAO.vb" />
+    <Compile Include="DAO\NFComRecepcaoDAO.vb" />
+    <Compile Include="DAO\NFComCaixaDAO.vb" />
+    <Compile Include="DAO\CTeCaixaDAO.vb" />
+    <Compile Include="DAO\CTeDAO.vb" />
+    <Compile Include="DAO\CTeEventoDAO.vb" />
+    <Compile Include="DAO\CTeRecepcaoDAO.vb" />
+    <Compile Include="DAO\DFeCCCContribDAO.VB" />
+    <Compile Include="DAO\DFeCertDigitalAutDAO.vb" />
+    <Compile Include="DAO\DFeLiberaValorTetoDAO.vb" />
+    <Compile Include="DAO\DFeMedicaoProcessamentoDAO.vb" />
+    <Compile Include="DAO\DFeMunicipioDAO.vb" />
+    <Compile Include="DAO\DFeReservaChavesDAO.vb" />
+    <Compile Include="DAO\DFeTipoSituacaoDAO.vb" />
+    <Compile Include="DAO\DFeUFConveniadaDAO.vb" />
+    <Compile Include="DAO\DFeUsoIndevidoDAO.vb" />
+    <Compile Include="DAO\MDFeDAO.vb" />
+    <Compile Include="DAO\MDFeEventoDAO.vb" />
+    <Compile Include="DAO\NFComDAO.vb" />
+    <Compile Include="DAO\NFComEventoDAO.vb" />
+    <Compile Include="DAO\NFComClassificacaoProdutoDAO.vb" />
+    <Compile Include="DAO\NF3eClassificacaoProdutoDAO.vb" />
+    <Compile Include="DAO\NF3eDAO.vb" />
+    <Compile Include="DAO\NF3eEventoDAO.vb" />
+    <Compile Include="DAO\TipoEventoDAO.vb" />
+    <Compile Include="Model\BPe.vb" />
+    <Compile Include="Model\BPeEvento.vb" />
+    <Compile Include="Model\BPeProtocoloInfEvento.vb" />
+    <Compile Include="Model\BPeProtocoloInfProt.vb" />
+    <Compile Include="Model\CTe.vb" />
+    <Compile Include="Model\CTeComplementado.vb" />
+    <Compile Include="Model\CTeEvento.vb" />
+    <Compile Include="Model\CTeInutilizacao.vb" />
+    <Compile Include="Model\CTeProtocoloInfEvento.vb" />
+    <Compile Include="Model\CTeProtocoloInfProt.vb" />
+    <Compile Include="Model\DFe.vb" />
+    <Compile Include="Model\DFeProtocolo.vb" />
+    <Compile Include="Model\Evento.vb" />
+    <Compile Include="Model\MDFe.vb" />
+    <Compile Include="Model\MDFeEvento.vb" />
+    <Compile Include="Model\MDFeProtocoloInfEvento.vb" />
+    <Compile Include="Model\MDFeProtocoloInfProt.vb" />
+    <Compile Include="Model\MDFeRegistroPassagem.vb" />
+    <Compile Include="Model\NFCom.vb" />
+    <Compile Include="Model\NF3e.vb" />
+    <Compile Include="Model\NFComProtocoloInfProt.vb" />
+    <Compile Include="Model\NFComProtocoloInfEvento.vb" />
+    <Compile Include="Model\NFComEvento.vb" />
+    <Compile Include="Model\NF3eEvento.vb" />
+    <Compile Include="Model\NF3eProtocoloInfEvento.vb" />
+    <Compile Include="Model\NF3eProtocoloInfProt.vb" />
+    <Compile Include="Model\NFe.vb" />
+    <Compile Include="Model\WebService.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Util\DateTimeDFe.vb" />
+    <Compile Include="Util\DFeException.vb" />
+    <Compile Include="Util\DFeParam.vb" />
+    <Compile Include="Util\InscricaoEstadual.vb" />
+    <Compile Include="Util\InscricaoEstadual2.vb" />
+    <Compile Include="Util\MedicaoProctoTempoMedio.vb" />
+    <Compile Include="Util\XMLDecision.vb" />
+    <Compile Include="Util\XMLDecisionRet.vb" />
+    <Compile Include="Util\XmlNotFoundException.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Procergs.DFe.Dto\Procergs.DFe.Dto.vbproj">
+      <Project>{63e7f653-5923-49c9-a165-acfb6fc203a4}</Project>
+      <Name>Procergs.DFe.Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Procergs.DFe.Infraestutura\Procergs.DFe.Infraestutura.vbproj">
+      <Project>{ed083c89-52e6-4d0c-bc81-16c0831378d8}</Project>
+      <Name>Procergs.DFe.Infraestutura</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
